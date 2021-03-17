@@ -9,8 +9,8 @@ fun main() {
     }
     println("________________________________")
 
-     println("Maior salario: ${salarios.max()}")
-     println("Menor salario: ${salarios.min()}")
+     println("Maior salario: ${salarios.maxOrNull()}")
+     println("Menor salario: ${salarios.minOrNull()}")
      println("Media salarial: ${salarios.average()}")
 
     println("________________________________")
@@ -19,4 +19,18 @@ fun main() {
     salariosFiltro.forEach {
         println(it)
     }
+    println("________________________________")
+
+    println(salarios.count{it in 2500.0..5000.0})
+
+    println("________________________________")
+
+    println(salarios.find{it == 3000.0})
+    println(salarios.find{it == 7000.0})
+
+    println("________________________________")
+
+    println(salarios.any{it == 5000.0})
+    println(salarios.any{it == 7000.0})
+
 }
